@@ -4,8 +4,8 @@ require '../condition'
 require '../command'
 require 'rspec'
 
-describe Config do
-    describe 'pars' do
+describe Command do
+    describe '#execute' do
         let (:valera) { Valera.instance }
 
         before(:context) do
