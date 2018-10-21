@@ -42,4 +42,10 @@ class Valera
 	def money=(money)
 		@money = money
 	end
+
+	@@instance = Valera.new
+
+	def instance
+		@@instance
+	end
 end
