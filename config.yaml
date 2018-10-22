@@ -1,0 +1,65 @@
+commands:
+  - classname: GoToWork
+    conditions:
+      - value1: mana
+        oper: <
+        value2: 50
+      - value1: fatigue
+        oper: <
+        value2: 10
+    health: 0
+    mana: -30
+    joy: -5
+    fatigue: 70
+    money: 100
+  - classname: WatchNature
+    conditions:
+    health: 0
+    mana: -10
+    joy: 1
+    fatigue: 10
+    money: 0
+  - classname: DrinkWineAndWatchTVSeries
+    conditions:
+      - value1: money
+        oper: '>='
+        value2: 20
+    health: -5
+    mana: +30
+    joy: -1
+    fatigue: 10
+    money: -20
+  - classname: GoToBar
+    conditions:
+    - value1: money
+      oper: '>='
+      value2: 100
+    health: -10
+    mana: +60
+    joy: 1
+    fatigue: 40
+    money: -100
+  - classname: DrinkWithMarginals
+    conditions:
+    - value1: money
+      oper: '>='
+      value2: 150
+    health: -80
+    mana: +90
+    joy: 5
+    fatigue: 80
+    money: -150
+  - classname: SingInTheSubway
+    conditions:
+    health: 0
+    mana: 10
+    joy: 1
+    fatigue: 20
+    money: 10
+  - classname: Sleep
+    conditions:
+    health: 90
+    mana: -50
+    joy: -3
+    fatigue: -70
+    money: 0
