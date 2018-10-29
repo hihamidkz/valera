@@ -9,14 +9,14 @@ describe Command do
         before(:context) do
             @valera = Valera.instance
             @config = Config.new('../config.yaml')
-            @config.pars
-            @watch = @config.coms[3]
+            coms = @config.pars
+            @go_to_bar = coms[3]
         end
 
         context 'when it is OK' do
             before(:context) do
                 @valera.money = 100
-                @watch.execute
+                @go_to_bar.execute
             end
 
             it 'joy should be 1' do
@@ -42,7 +42,7 @@ describe Command do
 
         context 'when not enough money' do
             before(:context) do
-                @watch.execute
+                @go_to_bar.execute
             end
 
             it 'joy should be 1' do

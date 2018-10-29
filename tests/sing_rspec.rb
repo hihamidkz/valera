@@ -9,8 +9,8 @@ describe Command do
         before(:context) do
             @valera = Valera.instance
             @config = Config.new('../config.yaml')
-            @config.pars
-            @sing = @config.coms[5]
+            coms = @config.pars
+            @sing = coms[5]
         end
 
         context 'when it is OK' do
