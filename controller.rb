@@ -47,4 +47,11 @@ class Controller
 		puts "If you want to save the game enter 1 or enter any else if you don't"
 		return gets.chomp.to_i
 	end
+	def save
+		File.open('valera.save', 'w'){ |file| file.write "health: #{@valera.health}\n"}
+		File.open('valera.save', 'a'){ |file| file.write "mana: #{@valera.mana}\n"}
+		File.open('valera.save', 'a'){ |file| file.write "joy: #{@valera.joy}\n"}
+		File.open('valera.save', 'a'){ |file| file.write "fatigue: #{@valera.fatigue}\n"}
+		File.open('valera.save', 'a'){ |file| file.write "money: #{@valera.money}\n"}
+	end
 end
