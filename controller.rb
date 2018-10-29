@@ -43,4 +43,8 @@ class Controller
 		puts "Enter -1 if you want to exit, 1 if you want to launch new game or 2 if you want to load the game"
 		return gets.chomp.to_i
 	end
+	def finish
+		puts "If you want to save the game enter 1 or enter any else if you don't"
+		return gets.chomp.to_i
+	end
 end
