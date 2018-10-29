@@ -21,4 +21,20 @@ class Application
 			end
 		end
 	end
+	def menu
+		command = @controller.start
+		if (command == -1)
+			return -1
+		elsif (command == 2)
+			@controller.load
+			save_or_not = run
+		elsif (command == 1)
+			save_or_not = run
+		end
+		if (save_or_not == -1)
+			if (@controller.finish == 1)
+				@controller.save
+			end
+		end
+	end
 end
