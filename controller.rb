@@ -54,4 +54,13 @@ class Controller
 		File.open('valera.save', 'a'){ |file| file.write "fatigue: #{@valera.fatigue}\n"}
 		File.open('valera.save', 'a'){ |file| file.write "money: #{@valera.money}\n"}
 	end
+	def load
+		string = File.open('valera.save'){ |file| file.read }
+		object = YAML.load(string)
+		@valera.health = object['health']
+		@valera.mana = object['mana']
+		@valera.joy = object['joy']
+		@valera.fatigue = object['fatigue']
+		@valera.money = object['money']
+	end
 end
