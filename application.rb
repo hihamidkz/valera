@@ -11,4 +11,14 @@ class Application
 		@config = Config.new('config.yaml')
 		@controller = Controller.new(@config.pars, @view)
 	end
+	def run
+		loop do
+			decision = @controller.step
+			if decision == -1
+				return -1
+			elsif decision == -2
+				return -2
+			end
+		end
+	end
 end
