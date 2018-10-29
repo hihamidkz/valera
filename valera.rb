@@ -33,7 +33,7 @@ class Valera
 	def fatigue=(fatigue)
 		if (fatigue > 100)
 			@fatigue = 100
-		elsif (fagilue < 0)
+		elsif (fatigue < 0)
 			@fatigue = 0
 		else
 			@fatigue = fatigue
@@ -45,7 +45,10 @@ class Valera
 
 	@@instance = Valera.new
 
-	def instance
+	def is_dead?
+		@@instance.health == 0
+	end
+	def self.instance
 		@@instance
 	end
 end
