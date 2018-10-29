@@ -20,4 +20,23 @@ class Controller
 		end
 		return number
 	end
+	def step
+		if @valera.is_dead?
+			puts "Valera is dead"
+			-2
+		else
+			@view.render
+			@commands.each_with_index do |command, index|
+				puts "#{index} - #{command.class}"
+			end
+			number = input
+			if (number == -1)
+				-1
+			else
+				if @commands[number].execute == -1
+				puts "The condition is not satisfied"
+				end
+			end
+		end
+	end
 end
