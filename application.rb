@@ -38,3 +38,6 @@ class Application
 		end
 	end
 end
+
+new_game = Application.new
+new_game.menu
