@@ -27,6 +27,8 @@ module CommandModule
 			@valera.joy += @values['joy']
 			@valera.fatigue += @values['fatigue']
 			@valera.money += @values['money']
+		else
+			-1
 		end
 	end
 end

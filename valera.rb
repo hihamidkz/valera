@@ -1,4 +1,7 @@
+require 'singleton'
+
 class Valera
+	include Singleton
 	attr_reader :health, :mana, :joy, :fatigue, :money
 	def initialize
 		@health, @mana, @joy, @fatigue, @money = 100, 0, 0, 0, 0
@@ -43,12 +46,7 @@ class Valera
 		@money = money
 	end
 
-	@@instance = Valera.new
-
 	def is_dead?
-		@@instance.health == 0
-	end
-	def self.instance
-		@@instance
+		self.health == 0
 	end
 end
